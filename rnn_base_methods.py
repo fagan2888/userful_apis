@@ -143,3 +143,4 @@ with tf.Session() as sess:
     print(output_bw.shape)
     print(states_fw)
     print(states_bw)
+   
