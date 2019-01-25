@@ -1,0 +1,15 @@
+import tensorflow as tf
+import numpy as np
+inputs=np.random.randn(2,5)
+samples = tf.multinomial(tf.exp(inputs), 3)
+print(inputs)
+with tf.Session() as sess:
+    sess.run(tf.global_variables_initializer())
+    print(sess.run(samples))
+    
+    
+output:
+[[ 0.57048404  0.41551466 -0.77830287  1.70547574 -1.07950425]
+ [ 1.05906444 -0.73930303 -0.5754887  -0.69353739  0.16786501]]
+[[3 3 3]
+ [0 2 4]]
